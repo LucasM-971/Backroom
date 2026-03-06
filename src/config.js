@@ -1,0 +1,108 @@
+// ─── CONFIGURATION ───────────────────────────────────────────────────────────
+
+export const CONFIG = {
+  // Map
+  MAP_SIZE: 31,
+  TILE_SIZE: 600,
+  WALL_HEIGHT: 400,
+  COLLISION_DIST: 150,
+
+  // Player
+  PLAYER_HEIGHT: 180,
+  WALK_SPEED: 400,
+  RUN_SPEED: 600,
+  STAMINA_MAX: 100,
+  STAMINA_DRAIN_RATE: 10,
+  STAMINA_REGEN_RATE: 10,
+  STAMINA_LOW_THRESHOLD: 30,
+
+  // Camera
+  FOV_NORMAL: 50,
+  FOV_RUNNING: 55,
+  FOV_TRANSITION_SPEED: 0.1,
+  
+  // Camera Bob
+  BOB_SPEED_WALK: 8,
+  BOB_SPEED_RUN: 14,
+  BOB_AMOUNT_WALK: 6,
+  BOB_AMOUNT_RUN: 10,
+  BOB_HORIZONTAL_FACTOR: 0.4,
+  BOB_DIAGONAL_FACTOR: 0.25,
+
+  // Torch Bob
+  TORCH_BOB_SPEED_WALK: 6,
+  TORCH_BOB_SPEED_RUN: 12,
+  TORCH_BOB_AMOUNT: 3,
+  TORCH_BOB_AMOUNT_IDLE: 0.5,
+
+  // Lighting
+  FLASHLIGHT_INTENSITY: 80,
+  FLASHLIGHT_DISTANCE: 1900,
+  FLASHLIGHT_ANGLE: Math.PI / 5,
+  FLASHLIGHT_PENUMBRA: 0.6,
+  FLASHLIGHT_DECAY: 0.8,
+  PLAYER_LIGHT_INTENSITY: 2,
+  PLAYER_LIGHT_DISTANCE: 500,
+  CEILING_LIGHT_INTENSITY: 1.0,
+  CEILING_LIGHT_DISTANCE: 1200,
+  CEILING_LIGHT_PROBABILITY: 0.08,
+  CEILING_LIGHT_FLICKER_PROBABILITY: 0.3,
+  CEILING_LIGHT_ACTIVE_DISTANCE: 2200,
+  CEILING_LIGHT_FLICKER_UPDATE_INTERVAL: 0.05,
+  CEILING_LIGHT_VISIBILITY_UPDATE_INTERVAL: 0.2,
+  EXIT_LIGHT_INTENSITY: 3,
+  EXIT_LIGHT_DISTANCE: 800,
+
+  // Effects
+  SHAKE_WALK: 0.5,
+  SHAKE_RUN: 2,
+  CHROMATIC_BASE: 0.0006,
+  CHROMATIC_RUN: 0.002,
+  VIGNETTE_DARKNESS: 0.88,
+  NOISE_OPACITY: 0.28,
+  SCANLINE_OPACITY: 0.05,
+  BLOOM_INTENSITY: 1.4,
+  BLOOM_THRESHOLD: 0.45,
+  BLOOM_SMOOTHING: 0.35,
+  BLOOM_RESOLUTION: 0.5,
+
+  // Panic mode
+  PANIC_THRESHOLD_SECONDS: 60,
+  PANIC_VIGNETTE_INCREASE: 0.5,
+  PANIC_CHROMATIC_INCREASE: 0.005,
+
+  // Timer
+  GAME_DURATION_SECONDS: 5 * 60,
+
+  // Renderer
+  MAX_PIXEL_RATIO: 1.5,
+  MIN_PIXEL_RATIO: 1.0,
+  TARGET_FPS: 60,
+  ADAPTIVE_QUALITY: true,
+  ADAPTIVE_QUALITY_SAMPLE_SECONDS: 0.5,
+  ADAPTIVE_PIXEL_RATIO_STEP: 0.1,
+  TONE_MAPPING_EXPOSURE: 1.1,
+
+  // Shadow
+  SHADOW_MAP_SIZE: 720,
+  SHADOW_BIAS: -0.0001,
+
+  // Paths
+  TEXTURES: {
+    WALL_DIFFUSE: '/textures/backrooms-wall-diffuse.png',
+    WALL_NORMAL: '/textures/backrooms-wall-normal.png',
+    FLOOR_DIFFUSE: '/textures/backrooms-carpet-diffuse.png',
+    FLOOR_NORMAL: '/textures/backrooms-carpet-normal.png',
+    ROOF_DIFFUSE: '/textures/backrooms-ceiling-tile-diffuse.png',
+    ROOF_NORMAL: '/textures/backrooms-ceiling-tile-normal.png',
+    ROOF_EMISSION: '/textures/backrooms-ceiling-light-emission.png',
+  },
+  SOUNDS: {
+    WALK: '/sounds/walk.mp3',
+    RUN: '/sounds/run.mp3',
+    AMBIENCE: '/sounds/backroom.mp3',
+  },
+  VIDEOS: {
+    ENDING: '/videos/escape_end.mp4',
+  },
+};
