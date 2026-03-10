@@ -111,7 +111,7 @@ export class UIManager {
       this.loadingScreen.style.transition = 'opacity 0.6s';
       this.loadingScreen.style.opacity = '0';
       setTimeout(() => this.loadingScreen.remove(), 600);
-    }, 400);
+    }, 3000);
   }
 
   showPauseScreen() {
