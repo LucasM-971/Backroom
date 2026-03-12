@@ -28,24 +28,7 @@ export class Player {
     }
   }
 
-  updateCameraBob(time, isMoving) {
-    if (isMoving) {
-      const cameraBobSpeed = this.isRunning ? CONFIG.BOB_SPEED_RUN : CONFIG.BOB_SPEED_WALK;
-      const cameraBobAmount = this.isRunning ? CONFIG.BOB_AMOUNT_RUN : CONFIG.BOB_AMOUNT_WALK;
 
-      const verticalBob = Math.sin(time * cameraBobSpeed) * cameraBobAmount;
-      const horizontalBob = Math.sin(time * cameraBobSpeed * 0.5) * (cameraBobAmount * CONFIG.BOB_HORIZONTAL_FACTOR);
-      const diagonalBob = Math.cos(time * cameraBobSpeed * 0.7) * (cameraBobAmount * CONFIG.BOB_DIAGONAL_FACTOR);
-
-      this.camera.position.y = CONFIG.PLAYER_HEIGHT + verticalBob;
-      this.camera.position.x = this.baseCameraX + horizontalBob;
-      this.camera.position.z = this.baseCameraZ + diagonalBob;
-    } else {
-      this.camera.position.y += (CONFIG.PLAYER_HEIGHT - this.camera.position.y) * 0.1;
-      this.camera.position.x += (this.baseCameraX - this.camera.position.x) * 0.1;
-      this.camera.position.z += (this.baseCameraZ - this.camera.position.z) * 0.1;
-    }
-  }
 
   updateFOV() {
     const targetFOV = this.isRunning ? CONFIG.FOV_RUNNING : CONFIG.FOV_NORMAL;

@@ -372,7 +372,6 @@ export class Game {
 
     // Update player
     this.player.updateStamina(delta, isMoving);
-    this.player.updateCameraBob(time, isMoving);
     this.player.updateFOV();
 
     // Update UI
